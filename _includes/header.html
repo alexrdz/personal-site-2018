@@ -1,0 +1,48 @@
+<label for="bio__toggle" class="bio__trigger">Work Bio</label>
+<input type="checkbox" id="bio__toggle" class="bio__toggle">
+
+<header 
+  class="
+    grid__cell--fill 
+    grid__cell--4-of-12@lg 
+    p-8 
+    site-header" 
+  role="banner"
+  >
+  
+
+    <div class="grid grid--middle">
+      <div class="grid__cell--fill grid__cell--6-of-12@md grid__cell--12-of-12@lg">
+        <div class="grid--small grid--middle grid--around brand">
+          <div class="grid__cell brand__skull">
+            <a href="/">
+              {%- include logo.html -%}
+            </a>
+          </div>
+      
+          <div class="grid__cell brand__content">
+            {%- assign default_paths = site.pages | map: "path" -%}
+            {%- assign page_paths = site.header_pages | default: default_paths -%}
+            <h1 class="site-title">
+              <a class="site-title__link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            </h1>
+            <h2 class="site-subtitle">Front End Dev</h2>
+          </div>
+        </div>
+      </div>
+          
+      <p class="grid__cell--6-of-12@md grid__cell--12-of-12@lg site-description">
+        {{ site.description | escape }}
+      </p>
+    </div>
+  
+    
+  
+    <div class="resume">
+      <h3 class="resume__current">UX/UI Designer & Front End Dev @ EquiTrust Financial</h3>
+      <h4 class="resume__previous">Previously: UX/UI Dev @ Media Sourcery, Inc.</h4>
+      <h5 class="resume__penultimate">Before that: UI Dev @ TekSystems/John Deere</h5>
+      <h6 class="resume__ultimate">And before that: Front End Dev @ City of Austin</h6>
+    </div>
+  
+</header>
