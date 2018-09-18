@@ -1,0 +1,31 @@
+@include utility-generator-single('padding', '', 8);
+@include utility-generator('padding', '', 4);
+// @include utility-generator('padding', 'l', 2);
+// @include utility-generator('padding', 'r', 3);
+// @include utility-generator('margin', 'r', 3);
+
+
+// @for $index from 1 through 8 {
+//   .p-#{$index} {
+//     padding: $index * $utility-unit;
+//   }
+  
+//   .px-#{$index} {
+//     padding-left: $index * $utility-unit;
+//     padding-right: $index * $utility-unit;
+//   }
+  
+//   .py-#{$index} {
+//     padding-bottom: $index * $utility-unit;
+//     padding-top: $index * $utility-unit;
+//   }
+  
+//   .pl-#{$index} {
+//     padding-left: $index * $utility-unit;
+//   }
+  
+//   .pr-#{$index} {
+//     padding-right: $index * $utility-unit;
+//   }
+
+// }

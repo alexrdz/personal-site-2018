@@ -1,0 +1,120 @@
+.bio__trigger {
+  color: $link-color;
+  cursor: pointer;
+  display: block;
+  @media (#{$desktop-up}) {
+    display: none;
+  }
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}
+.bio__toggle {
+  @media (#{$desktop-up}) {
+    display: none !important;
+  }
+}
+.bio__toggle:checked ~ .site-header .resume {
+  display: block;
+}
+.bio__toggle:checked ~ .main-content {
+  margin-bottom: 0;
+  margin-top: 64rem;
+}
+.bio__toggle:checked ~ .site-footer {
+  position: relative;
+}
+
+
+
+.site-header {
+  background-color: $color-white;
+  display: block;
+  position: fixed;
+  top: 0;
+  
+  @media (#{$desktop-up}) {
+    bottom: 0;
+    display: block;
+    left: 0;
+    width: calc(100% / 12 * 4);
+  }
+}
+
+.brand {
+  &__skull {
+    max-width: 10rem;
+
+    &--small {
+      max-width: 8rem;
+    }
+  }
+
+  &__content {
+    margin-left: 1rem;
+
+    &--no-margin {
+      margin: 0;
+    }
+  }
+
+}
+
+.site-title {
+  font-size: 4rem;
+  margin: 0;
+
+  &__link {
+    color: $color-headers;
+  }
+}
+
+.site-subtitle {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.site-description {
+  color: $color-description;
+  line-height: 2.8rem;
+  margin: 2rem 0 4rem;
+  @media (#{$tablet-up}) {
+    margin: 6rem 0 8rem;
+  }
+}
+
+
+
+
+.resume {
+  display: none;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+
+  &__current {
+    font-size: 2.4rem;
+  }
+  &__previous {
+    font-size: 2rem;
+  }
+  &__penultimate {
+    font-size: 1.6rem;
+  }
+  &__ultimate {
+    font-size: 1.2rem;
+  }
+
+  @media (#{$desktop-up}) {
+    display: block;
+  }
+}
+
+.contact-list {
+  display: none;
+  
+  @media (#{$desktop-up}) {
+    display: flex;
+  }
+}
+

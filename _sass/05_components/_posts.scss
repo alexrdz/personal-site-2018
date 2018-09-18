@@ -1,0 +1,25 @@
+.post-list {}
+
+.post {
+  &__title {
+    &::after {
+      background-color: $color-green;
+      border-radius: 8px;
+      content: '';
+      display: block;
+      height: 8px;
+      margin: 8px 0 16px 0;
+      width: 72px;
+    }
+  }
+
+
+  &__link {
+    color: $color-headers;
+  }
+
+  &__meta {
+    color: $color-description;
+    margin: 16px 0;
+  }
+}

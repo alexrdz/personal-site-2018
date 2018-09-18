@@ -1,0 +1,6 @@
+//- Flex Order
+@for $index from 0 through 4 {
+  .order-#{$index} {
+    order: #{$index};
+  }
+}

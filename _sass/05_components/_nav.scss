@@ -1,0 +1,36 @@
+.nav {
+  margin: 0;
+  @include responsive-nav('left');
+  
+  &--horizontal {
+    @include grid;
+
+    .nav__toggle ~ & {
+      display: block;
+
+      @media (#{$tablet-up}) {
+        display: flex;
+      }
+    }
+  }
+
+  &--top      { align-items: flex-start; }
+  &--middle   { align-items: center; }
+  &--bottom   { align-items: flex-end; }
+  &--stretch  { align-items: stretch; }
+  &--baseline { align-items: baseline; }
+  &--left     { justify-content: flex-start; }
+  &--center   { justify-content: center; }
+  &--right    { justify-content: flex-end; }
+  &--between  { justify-content: space-between; }
+  &--around   { justify-content: space-around; }
+
+  &__item {
+    margin: 0;
+  }
+
+  
+  
+
+
+}

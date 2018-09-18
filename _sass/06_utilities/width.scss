@@ -1,0 +1,7 @@
+@mixin width($width) {
+  .w-#{$width} {
+    width: $width * 1%;
+  }
+}
+
+@include width(100);

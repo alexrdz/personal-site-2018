@@ -1,0 +1,31 @@
+.content-wrapper {
+  padding: 10%;
+}
+
+.main-content {
+  background-color: $grey-lightest;
+  margin-bottom: 24rem;
+  margin-top: 28rem;
+  position: relative;
+  transition: margin .2s ease-in;
+  z-index: 10;
+  
+  @media (#{$phablet-up}) {
+    margin-top: 28rem;
+  }
+
+  @media (#{$tablet-up}) {
+    margin-top: 24rem;
+  }
+  
+  @media (#{$desktop-up}) {
+    margin-top: 0;
+    margin-left: calc(100% / #{$total-columns} * 4);
+  }
+
+  @media only screen 
+  and (#{$mobile-up})
+  and (orientation : landscape) {
+    margin-bottom: 0;
+  }
+}

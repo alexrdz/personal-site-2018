@@ -1,0 +1,35 @@
+.site-footer {
+  background-color: $color-white;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+
+  &__link {
+    display: block;
+    text-align: center;
+
+  }
+  
+  &__icon {
+    height: 6rem;
+    transition: fill .3s ease;
+    width: 6rem;
+
+    &:hover {
+      fill: $color-pink;
+    }
+  }
+
+  @media (#{$desktop-up}) {
+    display: none;
+  }
+
+  @media only screen 
+  and (#{$mobile-up})
+  and (orientation : landscape) {
+    position: relative;
+  }
+}

@@ -1,0 +1,213 @@
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Note: shorthand property with calc not liked by IE:
+// flex: 1 0 calc(100 / 12 * 1%);
+// works in Firefox and Chrome but not in IE
+@mixin cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 12 * 1%);
+}
+
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+    @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+  } @else {
+    @include css3-prefix('box-shadow', $x $y $blur $color);
+  }
+}
+
+
+
+
+//- Utility Generators
+@mixin utility-generator-single($prop, $direction, $unit) {
+  @if ($prop == 'padding') {
+    .p#{$direction}-#{$unit} {
+      @if ($direction == 'x') {
+          
+        #{$prop}-left: $unit * $utility-unit;
+        #{$prop}-right: $unit * $utility-unit;
+      
+      }
+      @if ($direction == 'y') {
+        
+          #{$prop}-bottom: $unit * $utility-unit;
+          #{$prop}-top: $unit * $utility-unit;
+        
+      }
+      @if ($direction == 'l') {
+        
+        #{$prop}-left: $unit * $utility-unit;
+      
+      }
+      @if ($direction == 'r') {
+        
+        #{$prop}-right: $unit * $utility-unit;
+        
+      } 
+      @if ($direction == '') {
+        
+        #{$prop}: $unit * $utility-unit;
+
+      }
+    }
+  }
+  @if ($prop == 'margin') {
+    .m#{$direction}-#{$unit} {
+      @if ($direction == 'x') {
+        
+          #{$prop}-left: $unit * $utility-unit;
+          #{$prop}-right: $unit * $utility-unit;
+        
+      }
+      @if ($direction == 'y') {
+        
+          #{$prop}-bottom: $unit * $utility-unit;
+          #{$prop}-top: $unit * $utility-unit;
+        
+      }
+      @if ($direction == 'l') {
+        
+        #{$prop}-left: $unit * $utility-unit;
+      
+      }
+      @if ($direction == 'r') {
+        
+        #{$prop}-right: $unit * $utility-unit;
+      
+      }
+    }
+  }
+}
+
+@mixin utility-generator($prop, $direction, $iterator) {
+  @for $index from 1 through $iterator {
+    @if ($prop == 'padding') {
+      .p#{$direction}-#{$index} {
+        @if ($direction == 'x') {
+          
+            #{$prop}-left: $index * $utility-unit;
+            #{$prop}-right: $index * $utility-unit;
+          
+        }
+        @if ($direction == 'y') {
+          
+            #{$prop}-bottom: $index * $utility-unit;
+            #{$prop}-top: $index * $utility-unit;
+          
+        }
+        @if ($direction == 'l') {
+          
+          #{$prop}-left: $index * $utility-unit;
+        
+        }
+        @if ($direction == 'r') {
+          
+          #{$prop}-right: $index * $utility-unit;
+          
+        } @else {
+          
+          #{$prop}: $index * $utility-unit;
+
+        }
+      }
+    }
+    @if ($prop == 'margin') {
+      .m#{$direction}-#{$index} {
+        @if ($direction == 'x') {
+          
+            #{$prop}-left: $index * $utility-unit;
+            #{$prop}-right: $index * $utility-unit;
+          
+        }
+        @if ($direction == 'y') {
+          
+            #{$prop}-bottom: $index * $utility-unit;
+            #{$prop}-top: $index * $utility-unit;
+          
+        }
+        @if ($direction == 'l') {
+          
+          #{$prop}-left: $index * $utility-unit;
+        
+        }
+        @if ($direction == 'r') {
+          
+          #{$prop}-right: $index * $utility-unit;
+        
+        }
+      }
+    }
+  }
+}
+
+
+
+@mixin responsive-nav($position) {
+  #{$position}: -100%;
+  position: fixed;
+  transition: #{$position} .3s ease-in-out;
+  
+  &__toggle {
+    #{$position}: 10%;
+    position: fixed;
+  }
+
+  @media (#{$tablet-up}) {
+    position: relative;
+    #{$position}: 0;
+
+    &__toggle {
+      #{$position}: -100%;
+    }
+  }
+
+
+  &__toggle {
+    cursor: pointer;
+    z-index: 5;
+    
+    & + [type=checkbox] {
+      float: left;
+      margin-left: -9999rem;
+      
+      + nav {
+        background: $nav-background-color;
+        height: 100%;
+        #{$position}: -100%;
+        padding: 5rem;
+        top: 0;
+        width: 100%;
+
+        @media (#{$tablet-up}) {
+          background: inherit;
+          height: auto;
+          #{$position}: 0;
+          padding: inherit;
+          width: auto;
+        }
+      }
+      
+      &:checked + nav {
+        #{$position}: 0;
+      }
+    }
+
+  }
+  
+}

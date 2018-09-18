@@ -1,0 +1,49 @@
+//- Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+//- Breakpoints
+$mobile-up    : "min-width: 400px" !default;
+$phablet-up   : "min-width: 550px" !default;
+$tablet-up   : "min-width: 750px" !default;
+$desktop-up  : "min-width: 1000px" !default;
+$desktophd-up: "min-width: 1200px" !default;
+
+//- Colors
+$grey-lightest: #f7f7f7 !default;
+$grey-light: #e1e1e1 !default;
+$grey-dark: #333 !default;
+$primary-color: #33c3f0 !default;
+$secondary-color: lighten($grey-dark, 13.5%) !default;
+$border-color: #bbb !default;
+$link-color: #1eaedb !default;
+$font-color: #151515 !default;
+
+$color-body: #3D3131;
+$color-description: #7D7D7D;
+$color-green: #329353;
+$color-pink: #B01368;
+$color-headers: #151515;
+$color-white: #fff;
+
+$nav-background-color: $grey-light;
+
+//- Typography
+$font-family: "Merriweather", serif !default;
+
+//- Spacing Variables
+$spacing-1:     1rem;
+$spacing-1-5:   1.5rem;
+$spacing-2:     2rem;
+$spacing-2-5:   2.5rem;
+$spacing-3:     3rem;
+$spacing-3-5:   3.5rem;
+
+//- Grid Variables
+$total-columns: 12 !default;
+$gutter-spacing: $spacing-1 !default;
+
+//- Utility Unit
+$utility-unit: .25rem;
+
+//- Misc
+$global-radius: 4px !default;
