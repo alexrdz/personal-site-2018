@@ -39,4 +39,4 @@ EquiTrust was not using a preprocessor so all the CSS was really in one large fi
 
 Having my UI inventory on one side and the CSS on the other, I had a sort of road map of things I wanted to see and places in the stylesheet I wanted to visit.
 
-One of the first issues I wanted to tackle was the content width of the site. The main content of every major page on the site was consisted of a few paragraphs with 1 to three sentences each. This made for content to appear on one to two lines stretching across the entire site. I made it known before touching any code that this was the first issue I wanted to fix since it looked awkward and
+One of the first issues I wanted to tackle was the content width of the site. The main content of every major page on the site was consisted of a few paragraphs with 1 to three sentences each. This made for content to appear on one to two lines stretching across the entire site. It looked awkward and made for a bad reading experience.
