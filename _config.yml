@@ -22,6 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+google_analytics: "UA-4084658-3"
 
 # Build settings
 markdown: kramdown
@@ -42,3 +43,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+deploy:
+  repository: git@github.com-alexrdz:alexrdz/alexrdz.github.io.git
+  branch: master
