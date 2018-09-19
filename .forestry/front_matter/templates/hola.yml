@@ -24,4 +24,5 @@ fields:
   hidden: false
   default: ''
 pages:
+- _posts/RXJS---wtf.md
 - _posts/Refactoring-CSS.md
