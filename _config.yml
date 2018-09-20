@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Dedicated UI designer and JavaScript developer with a passion for smart design and beautiful code.
 show_excerpts: true
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alexrdz.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 google_analytics: "UA-4084658-3"
@@ -31,6 +31,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
