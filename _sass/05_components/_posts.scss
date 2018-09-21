@@ -22,4 +22,10 @@
     color: $color-description;
     margin: 16px 0;
   }
+
+  img {
+    border: 20px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 5px 40px rgba(0,0,0,.21);
+  }
 }
