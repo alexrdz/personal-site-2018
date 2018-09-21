@@ -8,6 +8,6 @@ This site is built with [Skeleton CSS](http://getskeleton.com/ "Skeleton CSS") (
 
 ### A little more about me
 
-When not working on the Web, I'm working on raising two wonderful little women:
+When not working on the Web, I work with my absolutely incredible wife raising two wonderful little women:
 
 ![picture of my daughters](/uploads/IMG_20180725_101634852-1.jpg "My loves")
